@@ -1,0 +1,72 @@
+@import url("https://at.alicdn.com/t/font_3419016_zexlhzc9ea.css");
+@import '../theme/variable.less';
+*, :before, :after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, .m {
+    margin: 0;
+}
+// 布局
+.container {
+    margin: 0 auto;
+    max-width: var(--scree-max-width);
+}
+.flex {
+    display: flex;
+    &-sbt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-no-shrink {
+        flex-shrink: 0;
+    }
+}
+// 按钮
+.btn {
+    font-size: 16px;
+    display: inline-block;
+    background-color: var(--btn-color);
+    color: var(--text-code);
+    padding: 8px 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color .5s, color .5s;
+    cursor: pointer;
+
+    & + .btn {
+        margin-left: 5px;
+    }
+    &:hover {
+        background-color: var(--btn-active-color);
+        transition-duration: .2s;
+    }
+}
+// 面板
+.panel {
+    background-color: var(--main-bg);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--divider-color);
+        padding: 0 15px;
+        height: 50px;
+        h3 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    .body {
+        padding: 15px;
+    }
+}

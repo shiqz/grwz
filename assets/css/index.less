@@ -1,0 +1,174 @@
+@import './common/base.less';
+html {
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: var(--font-base);
+    letter-spacing: .2px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-fc);
+    background-color: var(--main-bg);
+    direction: ltr;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    transition: color .5s, background-color .5s;
+
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+}
+body {
+    background-color: transparent;
+}
+#__nuxt {
+    width: 100%;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    color: var(--header-fc);
+
+    .nav-bar {
+        position: relative;
+        padding: 0 15px 0 20px;
+        border-bottom: 1px solid var(--divider-color);
+
+        .nav-title {
+            display: flex;
+            align-items: center;
+            height: var(--header-nav-height);
+            color: var(--color-white);
+
+            img {
+                max-height: 80%;
+                margin-right: 5px;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        nav {
+            font-size: 14px;
+            height: var(--header-nav-height);
+            a {
+                color: inherit;
+                display: inline-flex;
+                transition: color .25s;
+                line-height: var(--header-nav-height);
+                &:hover {
+                    color: var(--main-active-fc);
+                }
+                & + a {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+// 主体
+.main-wrapper {
+    padding-top: var(--header-height);
+
+    main {
+        margin-top: 1rem;
+    }
+
+    .content {
+        width: 100%;
+        margin-right: 15px;
+    }
+
+    aside {
+        width: var(--aside-width);
+    }
+
+    footer {
+        margin-top: 15px;
+    }
+
+    .about {
+        .hello-wrapper {
+            padding: 96px 32px;
+            text-align: center;
+            .title {
+                font-size: 76px;
+                line-height: 1.25;
+                font-weight: 900;
+                letter-spacing: -1.5px;
+                max-width: 960px;
+                margin: 0 auto;
+
+                .accent {
+                    background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .description {
+                max-width: 960px;
+                line-height: 1.5;
+                color: var(--text-color-2);
+                transition: color .5s;
+                font-size: 22px;
+                margin: 24px auto 40px;
+            }
+            .actions {
+                .btn {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    article {
+        &.item {
+            width: 100%;
+            background-color: var(--article-item-bg);
+            padding: 15px;
+            border: 1px solid var(--divider-color);
+            border-radius: 3px;
+            position: relative;
+            transition: all .2s;
+            margin-bottom: 15px;
+
+            .title {
+                font-size: 20px;
+                color: var(--main-fc);
+                font-weight: 700;
+                display: inline-flex;
+                align-items: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                a {
+                    color: inherit;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.pattern-bg {
+    background: var(--main-image-bg);
+    background-size: 340px;
+    bottom: 0;
+    left: 0;
+    opacity: .4;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
