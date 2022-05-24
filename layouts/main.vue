@@ -1,17 +1,13 @@
 <template>
-    <div>
+    <div id="app">
         <layout-header />
         <div class="main-wrapper">
             <main>
-                <div class="container flex">
-                    <div class="content">
-                        <slot />
-                    </div>
-                    <layout-aside />
+                <div class="container">
+                    <slot />
                 </div>
             </main>
             <layout-footer />
         </div>
-
     </div>
 </template>

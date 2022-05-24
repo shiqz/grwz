@@ -1,5 +1,7 @@
 <template>
     <footer>
-        <div class="container">底部</div>
+        <div class="container flex-row">
+            底部
+        </div>
     </footer>
 </template>

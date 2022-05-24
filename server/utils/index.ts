@@ -1,4 +1,4 @@
-import http from "~~/common/utils/http";
+import http from "~~/common/tools/http";
 
 const defaultMessage = (status, message) => {
     if (message != '') {
@@ -26,12 +26,12 @@ export default {
             API_SECRET: useRuntimeConfig().apiSecret
         }
     },
-    setHeader (header:any = {}) {
-        return Object.assign(header, this.defaultMessage())
+    setHeader (header: any = {}) {
+        return Object.assign(header, this.defaultServerHeader())
     },
 
-    request(url:string, data:any = {}, method:string = 'POST', extra:any = {}) {
-        extra.header = this.setHeader(extra.header || {})
+    request (url: string, data: any = {}, method: string = 'GET', extra: any = {}) {
+        extra.headers = this.setHeader(extra.headers || {})
         return http.handler(url, data, method, extra)
     }
 }

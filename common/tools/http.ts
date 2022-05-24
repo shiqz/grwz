@@ -10,7 +10,7 @@ class Http {
             params: {},
             data: {},
             headers: {
-                
+                'Content-Type': 'application/json'
             }
         }
         Object.assign(options, extra)

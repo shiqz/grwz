@@ -1,10 +1,13 @@
-@import url("https://at.alicdn.com/t/font_3419016_zexlhzc9ea.css");
+@import url("https://at.alicdn.com/t/font_3419016_f3nm02y4kd8.css");
 @import '../theme/variable.less';
 *, :before, :after {
     box-sizing: border-box;
 }
 body, h1, h2, h3, h4, h5, h6, .m {
     margin: 0;
+}
+.p0 {
+    padding: 0 !important;
 }
 // 布局
 .container {
@@ -68,5 +71,33 @@ body, h1, h2, h3, h4, h5, h6, .m {
 
     .body {
         padding: 15px;
+
+        &.article-list {
+            padding: 0;
+
+            article.item {
+                border: none;
+                border-bottom: 1px solid var(--divider-color);
+                margin: 0;
+                border-radius: 0;
+
+                &:hover {
+                    background-color: #fafafa;
+                }
+            }
+        }
+
+    }
+}
+.label-item {
+    display: inline-flex;
+    align-items: center;
+
+    .iconfont {
+        margin-right: 3px;
+    }
+
+    & + & {
+        margin-left: 10px;
     }
 }
