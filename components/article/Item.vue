@@ -1,11 +1,13 @@
 <script setup>
 import tools from '~~/common/tools'
-
-defineProps(['info'])
+const props = defineProps(['info', 'type'])
 </script>
 
 <template>
-    <article class="item">
+    <article class="cell-item" v-if="type == 'cell-item'">
+        <nuxt-link :to="`/article/${info.guid}.html`">{{ info.title }}</nuxt-link>
+    </article>
+    <article class="item" v-else>
         <h3 class="title">
             <nuxt-link :to="`/article/${info.guid}.html`">{{ info.title }}</nuxt-link>
         </h3>

@@ -3,11 +3,17 @@
 *, :before, :after {
     box-sizing: border-box;
 }
-body, h1, h2, h3, h4, h5, h6, .m {
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 !important;
+}
+body, .m {
     margin: 0;
 }
 .p0 {
     padding: 0 !important;
+}
+.mt-10 {
+    margin-top: 10px;
 }
 // 布局
 .container {
@@ -99,5 +105,10 @@ body, h1, h2, h3, h4, h5, h6, .m {
 
     & + & {
         margin-left: 10px;
+    }
+}
+.color {
+    &-desc {
+        color: var(--color-gray) !important;
     }
 }

@@ -15,6 +15,7 @@ class Http {
         }
         Object.assign(options, extra)
         method == "GET" ? options.params = data : options.data = data
+        console.log(JSON.stringify(options))
         return $fetch(url, options)
     }
 }
